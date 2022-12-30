@@ -1,6 +1,11 @@
 const generateHTML=(data)=>{
+    console.log(data)
+
+
     return `
     
+
+
     <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,3 +98,5 @@ const generateHTML=(data)=>{
     
     `
 }
+
+export default generateHTML

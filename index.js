@@ -1,6 +1,7 @@
 import inquirer from 'inquirer'
 import generateHTML from './generateHTML.js'
 import fs from 'fs'
+console.log(generateHTML)
 
 // let addEngineer=addEngineer
 // let addIntern=addIntern
@@ -16,6 +17,8 @@ import fs from 'fs'
 // let internID=internID
 // let internEmail=internEmail
 // let internSchool=internSchool
+
+let answersArray=[]
 
 begin()
 
@@ -47,6 +50,7 @@ inquirer.prompt([
       }
     ]).then(answers=>{
         console.log(answers)
+        answersArray.push(answers)
         addEngineerFunction()
     })
 }
@@ -104,6 +108,7 @@ function addEngineerFunction(){
           }
         ]).then(answers=>{
             console.log(answers)
+            answersArray.push(answers)
             menuPrompt()
          })
     }
@@ -137,30 +142,32 @@ function addInternFunction(){
                 type: "input",
                 message: "Enter the school you attend: ",
                 name: "internSchool",
-                default:'dont YOU know where I went to school?',
+                default:"don't YOU know where I went to school?",
                 // when:(input)=> input.positionSelection==="Add Intern"
               }
         ]).then(answers=>{
             console.log(answers)
             menuPrompt()
+            answersArray.push(answers)
         })
     }
 
 function finish(){
-   
-        inquirer.prompt([
-            {
-                type: "list",
-                message: "Would you like to write the file",
-                name: "writeToFile",
-                choices: ["Yes","No"],
-                // default:"Yes",
-                // when: (input) => input.positionSelection === "Add Intern"
-              }
-        ]).then(answers=>{
-                console.log(answers)
-                if(answers.separator==="Yes"){
-                    const html=generateHTML(answers)
+   console.log(answersArray)
+        // inquirer.prompt([
+        //     {
+        //         type: "list",
+        //         message: "Would you like to write the file",
+        //         name: "writeToFile",
+        //         choices: ["Yes","No"],
+        //         // default:"Yes",
+        //         // when: (input) => input.positionSelection === "Add Intern"
+        //       }
+        // ])
+        // .then(answers=>{
+                // console.log(answers)
+                // if(answers.separator==="Yes"){
+                    const html=generateHTML(answersArray)
                     console.log(html)
                     fs.writeFile('./engineeringTeam.html', html, error => {
                       if (error) throw error
@@ -168,12 +175,12 @@ function finish(){
                       console.log("file has been generated");
                     });
                     
-                }else {
-                    console.log('you have to say yes')
-                    finish()
-                }
-  })
-}
+                // }else {
+                //     console.log('you have to say yes')
+                //     finish()
+                // }
+  }
+ 
 
 
  

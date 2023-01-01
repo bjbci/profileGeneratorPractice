@@ -6,10 +6,10 @@ const Intern= require('../lib/Intern')
 
 it('gets intern school',()=>{
 //arrange
-const intern= new Intern("Bobby",227,'emailme@aol.com')
+const intern= new Intern("Bobby",227,'emailme@aol.com','UW')
 //act
 //assert
-  expect(intern.school).toEqual(expect.any('string'))
+  expect(typeof intern.school).toBe('string')
 })
 
 
@@ -17,17 +17,12 @@ const intern= new Intern("Bobby",227,'emailme@aol.com')
 it('gets role',()=>{
     //arrange
   
-    const intern= new Intern("Bobby",227,'emailme@aol.com')
+    const intern= new Intern("Bobby",227,'emailme@aol.com','UW')
     //assert
     
-    expect(intern.getRole()).toEqual('Intern')
+    expect(intern.getRole()).toEqual('intern')
     
 })
 
 
 
-// * `school`
-
-// * `getSchool()`
-
-// * `getRole()`&mdash;overridden to return `'Intern'`

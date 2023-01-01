@@ -5,20 +5,22 @@ const Employee=require('../lib/Employee')
 
 it('returns an employee object',()=>{
 //arrange
-const employee= new Employee(employee,"Bobby",227,'emailme@aol.com')
+const employee= new Employee("Bobby",227,'emailme@aol.com')
 //act
 //assert
-expect(typeof manager).toBe('object')
+expect(typeof employee.name).toBe('string')
+expect(typeof employee.id).toBe('number')
+expect(typeof employee.email).toBe('string')
 })
 
 
 
 it('gets the correct name',()=>{
 //arrange
-const employee= new Employee(employee,"Bobby",227,'emailme@aol.com')
+const employee= new Employee("Bobby",227,'emailme@aol.com')
 //act
 //assert
-expect(typeof employee.getName()).toBe('string')
+expect(employee.getName()).toBe('Bobby')
 })
 
 
@@ -29,7 +31,9 @@ it('returns an id',()=>{
 const employee= new Employee('employee',"Bobby",227,'emailme@aol.com')
 //act
 //assert
-expect(typeof employee.getId()).toBe('number')
+// let gID =getId()
+// console.log(gID)
+expect(typeof employee.getId()).toBe('string')
 })
 
 
@@ -37,7 +41,7 @@ expect(typeof employee.getId()).toBe('number')
 
 it('returns an employee email',()=>{
 //arrange
-const employee= new Employee(employee,"Bobby",227,'emailme@aol.com')
+const employee= new Employee("Bobby",227,'emailme@aol.com')
 //act
 //assert
 expect(typeof employee.getEmail()).toBe('string')

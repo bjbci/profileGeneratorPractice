@@ -2,14 +2,28 @@
   "name": "profilegeneratorpractice",
   "version": "1.0.0",
   "description": "",
-  "main": "generateHTML.js",
+  "main": "index.js",
   "type":"module",
+  "directories": {
+    "test": "tests"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bjbci/profileGeneratorPractice.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bjbci/profileGeneratorPractice/issues"
+  },
+  "homepage": "https://github.com/bjbci/profileGeneratorPractice#readme",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  },
   "dependencies": {
     "inquirer": "^9.1.4"
   }

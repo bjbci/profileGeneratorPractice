@@ -1,6 +1,10 @@
 const generateHTML=(data)=>{
     console.log(data)
-    
+
+
+    // ROLE ROLE ROLE ROLE
+
+
     
     const [ 
         addEngineer, 
@@ -17,18 +21,26 @@ const generateHTML=(data)=>{
         internID,
         internEmail,
         internSchool]=data
+
+        console.log(data[3].employeeRole)
+        console.log(data[3].employeeName)
+        console.log(data[3].employeeID)
+        console.log(data[3].employeeEmail)
+       
         
+        console.log(data[2].internRole)
         console.log(data[2].internName)
         console.log(data[2].internID)
         console.log(data[2].internEmail)
         console.log(data[2].internSchool)
         
-      
+        console.log(data[1].engineerRole)
         console.log(data[1].engineerName)
         console.log(data[1].engineerID)
         console.log(data[1].engineerEmail)
         console.log(data[1].engineerGithub)
       
+        console.log(data[0].managerRole)
         console.log(data[0].managerName)
         console.log(data[0].managerID)
         console.log(data[0].managerEmail)

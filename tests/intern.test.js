@@ -1,41 +1,33 @@
-const { hasUncaughtExceptionCaptureCallback } = require('process')
-const {Intern}=require('../Intern')
 
-describe("xxxxxxxxxxxxx",()=>{
 
-test('returns an xxxxxx',()=>{
+const Intern= require('../lib/Intern')
+
+// describe("xxxxxxxxxxxxx",()=>{
+
+it('gets intern school',()=>{
 //arrange
-const name='bob'
-const id= 333
-const email='bajebi@mac.com'
-//act
-const engineer= new Employee(name,id,email)
-console.log(engineer)
-//assert
-hasUncaughtExceptionCaptureCallback(engineer instanceof Engineer).toBe('true')
-
-// expect(typeof employee).toBe("object")
-
-})
-
-it('has a name',()=>{
-//arrange
+const intern= new Intern("Bobby",227,'emailme@aol.com')
 //act
 //assert
-
-})
-it('has a id number',()=>{
-//arrange
-//act
-//assert
-
-})
-it('has a email',()=>{
-//arrange
-//act
-//assert
-
+  expect(intern.school).toEqual(expect.any('string'))
 })
 
 
+
+it('gets role',()=>{
+    //arrange
+  
+    const intern= new Intern("Bobby",227,'emailme@aol.com')
+    //assert
+    
+    expect(intern.getRole()).toEqual('Intern')
+    
 })
+
+
+
+// * `school`
+
+// * `getSchool()`
+
+// * `getRole()`&mdash;overridden to return `'Intern'`

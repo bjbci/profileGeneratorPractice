@@ -1,42 +1,29 @@
-const { hasUncaughtExceptionCaptureCallback } = require('process')
-const {Engineer}=require('../Engineer')
 
-describe("xxxxxxxxxxxxx",()=>{
 
-test('returns an xxxxxx',()=>{
-//arrange
-const name='bob'
-const id= 333
-const email='bajebi@mac.com'
-//act
-const engineer= new Employee(name,id,email)
-console.log(engineer)
-//assert
-hasUncaughtExceptionCaptureCallback(engineer instanceof Engineer).toBe('true')
+const Engineer= require('../lib/Engineer')
 
-// expect(typeof employee).toBe("object")
+// describe("engineer",()=>{
 
-})
+// })
+// it('verifies github',()=>{
+//     //arrange
+  
+//     const engineer= new Engineer('employee',"Bobby",227,'emailme@aol.com')
+//     expect(engineer.github()).toEqual
+    
+//      })
 
-it('has a name',()=>{
-//arrange
-//act
-//assert
 
-})
-it('has a id number',()=>{
-//arrange
-//act
-//assert
-
-})
-it('has a email',()=>{
-//arrange
-//act
-//assert
-
+it('gets role',()=>{
+    //arrange
+  
+    const engineer= new Engineer("Bobby",227,'emailme@aol.com')
+    //assert
+    
+    expect(engineer.getRole()).toEqual('Engineer')
+    
 })
 
 
-})
+
 

@@ -1,58 +1,45 @@
 
-const { hasUncaughtExceptionCaptureCallback } = require('process')
-const {Employee}=require('../Employee')
+const Employee=require('../lib/Employee')
 
-describe("Employee constructor",()=>{
+// describe("Employee constructor",()=>{//  MULTIPLE TEST GO INSIDE ONE DESCRIBE
 
-test('returns an employee object',()=>{
+it('returns an employee object',()=>{
 //arrange
-const name='bob'
-const id= 333
-const email='bajebi@mac.com'
+const employee= new Employee(employee,"Bobby",227,'emailme@aol.com')
 //act
-const employee= new Employee(name,id,email)
-console.log(employee)
 //assert
-hasUncaughtExceptionCaptureCallback(employee instanceof Employee).toBe('true')
-
-// expect(typeof employee).toBe("object")
-
+expect(typeof manager).toBe('object')
 })
 
-it('has a name',()=>{
+
+
+it('gets the correct name',()=>{
 //arrange
-const name='bob'
-const id= 333
-const email='bajebi@mac.com'
+const employee= new Employee(employee,"Bobby",227,'emailme@aol.com')
 //act
-const employee= new Employee(name,id,email)
 //assert
-hasUncaughtExceptionCaptureCallback(employee.name).toBe(typeof string)
-
+expect(typeof employee.getName()).toBe('string')
 })
-it('has a id number',()=>{
+
+
+
+
+it('returns an id',()=>{
 //arrange
-const name='bob'
-const id= 333
-const email='bajebi@mac.com'
+const employee= new Employee('employee',"Bobby",227,'emailme@aol.com')
 //act
-const employee= new Employee(name,id,email)
-
 //assert
-hasUncaughtExceptionCaptureCallback(employee.id).toBe(typeof number)
-
+expect(typeof employee.getId()).toBe('number')
 })
-it('has a email',()=>{
+
+
+
+
+it('returns an employee email',()=>{
 //arrange
-const name='bob'
-const id= 333
-const email='bajebi@mac.com'
+const employee= new Employee(employee,"Bobby",227,'emailme@aol.com')
 //act
-const employee= new Employee(name,id,email)
 //assert
-hasUncaughtExceptionCaptureCallback(employee.id).toBe(typeof number)
-
+expect(typeof employee.getEmail()).toBe('string')
 })
 
-
-})

@@ -22,10 +22,10 @@ const generateHTML=(data)=>{
         internEmail,
         internSchool]=data
 
-        console.log(data[3].employeeRole)
-        console.log(data[3].employeeName)
-        console.log(data[3].employeeID)
-        console.log(data[3].employeeEmail)
+        // console.log(data[3].employeeRole)
+        // console.log(data[3].employeeName)
+        // console.log(data[3].employeeID)
+        // console.log(data[3].employeeEmail)
        
         
         console.log(data[2].internRole)
@@ -78,7 +78,8 @@ const generateHTML=(data)=>{
                     <h6 class="card-subtitle mb-2 text-muted" id="employeeRole" >Manager ${ data[0].managerName}</h6>
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">ID: <span id="employeeID">${ data[0].managerID}</span>  </li>
-                        <li class="list-group-item" id="employeeEmail">email:<span id="employeeID" ><a href="${ data[0].managerEmail}" class="card-link">${ data[0].managerEmail}</a></span></li>
+                        <li class="list-group-item" id="employeeEmail">email:<span id="employeeID" >
+                        <a href="mailto:${ data[0].managerEmail}?">${ data[0].managerEmail}</a> </span></li>
                       
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item">Office Number: ${data[0].officeNumber}<span id="employeeOfficeNumber"></span> </li>
@@ -96,7 +97,7 @@ const generateHTML=(data)=>{
                 <h6 class="card-subtitle mb-2 text-muted" id="employeeRole">Engineer: ${ data[1].engineerName }</h6>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">ID: ${data[1]. engineerID } <span id="employeeID"></span></li>
-                    <li class="list-group-item">Email: <a href="${ data[1].engineerEmail}" class="card-link">${ data[1].engineerEmail}</a></li>
+                    <li class="list-group-item">Email:<a href="mailto:${ data[1].engineerEmail}?">${ data[1].engineerEmail}</a></li>
                    
 
                     <li class="list-group-item"><a href="${data[1].engineerGithub}"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
@@ -114,7 +115,7 @@ const generateHTML=(data)=>{
                 <h6 class="card-subtitle mb-2 text-muted" id="employeeRole">Intern: ${ data[2].internName}</h6>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">ID: ${ data[2]. internID }<span id="employeeID"></span>  </li>
-                    <li class="list-group-item">email: <a href="${ data[2].internEmail}" class="card-link">${ data[2].internEmail}</a></li>
+                    <li class="list-group-item">email: <a href="mailto:${ data[2].internEmail}?">${ data[2].internEmail}</a></li>
                     <li class="list-group-item" id="employeeSchool">School: <span id="employeeSchool">${ data[2].internSchool}</span> </li>
                    
                   </ul>
